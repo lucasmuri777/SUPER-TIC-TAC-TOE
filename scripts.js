@@ -155,53 +155,52 @@ function verificaBoxBig(){
 	verificarBoxRegras(arr,0, 'big')
 }
 function verificarBoxRegras(box,index, type){
-	let bigBox = document.querySelectorAll('.big-box');
-	if(type == 'small'){
-		bigBox = bigBox[index];
-	}
+	let bigBox = document.querySelectorAll('.big-box')[index];
 	if(box[0] == box[1] && box[0] == box[2] && box[0] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,0)}
-		if(type == 'big'){bigBoxChecked(bigBox, box, 0)}
+		if(type == 'big'){bigBoxChecked( box, 0)}
 	}
+	
 	if(box[0] == box[4] && box[0] == box[8] && box[0] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,0)}
-		if(type == 'big'){bigBoxChecked(bigBox, box, 0)}
+		if(type == 'big'){bigBoxChecked(box, 0)}
 	}
 
 	if(box[0] == box[3] && box[0] == box[6] && box[0] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,0)}
-		if(type == 'big'){bigBoxChecked(bigBox, box, 0)}
+		if(type == 'big'){bigBoxChecked( box, 0)}
 	}
 
 	if(box[1] == box[4] && box[1] == box[7] && box[1] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,1)}
-		if(type == 'big'){bigBoxChecked(bigBox, box, 1)}
+		if(type == 'big'){bigBoxChecked( box, 1)}
 	}
 
 	if(box[2] == box[5] && box[2] == box[8] && box[2] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,2)}
-		if(type == 'big'){bigBoxChecked(bigBox, box, 2)}
+		if(type == 'big'){bigBoxChecked( box, 2)}
 	}
 
-	if(box[2] == box[4] && box[2] == box[6] && box[3] != ''){
+	if(box[2] == box[4] && box[2] == box[6] && box[2] != ''){
+		console.log(box)
 		if(type == 'small'){smallBoxChecked(bigBox, box,2)}
-		if(type == 'big'){bigBoxChecked(bigBox, box, 2)}
+		if(type == 'big'){bigBoxChecked( box, 2)}
 	}
 
 	if(box[3] == box[4] && box[3] == box[5] && box[3] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,3)}
-		if(type == 'big'){bigBoxChecked(bigBox, box, 3)}
+		if(type == 'big'){bigBoxChecked(box, 3)}
 		
 	}
 
 	if(box[6] == box[7] && box[6] == box[8] && box[6] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,6)}
-		if(type == 'big'){bigBoxChecked(bigBox, box, 6)}
+		if(type == 'big'){bigBoxChecked(box, 6)}
 		
 	}
 	else if(box[0] != '' && box[1] != '' && box[2] != '' && box[3] != '' && box[4] != '' && box[5] != '' && box[6] != '' && box[7] != '' && box[8] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box, 'JOKER')}
-		if(type == 'big'){bigBoxChecked(bigBox, box, 'JOKER')}
+		if(type == 'big'){bigBoxChecked(box, 'JOKER')}
 		
 	}
 
@@ -221,7 +220,7 @@ function smallBoxChecked(bigBox, box,index){
 		box.active = false;
 	}
 }
-function bigBoxChecked(bigBox, box,index){
+function bigBoxChecked(box,index){
 	if(index == 'JOKER'){
 		document.querySelector('.container .jogo-big').classList.add('finished');
 		document.querySelector('.container .jogo-big').innerHTML = 'EMPATE';
