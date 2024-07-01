@@ -32,7 +32,7 @@ function jogar(indexSmall, jogada, indexBig, big){
 			
 			jogo[indexBig][indexSmall] = vez;
 			verificaBoxSmall();
-
+			verificaBoxBig();
 			if(jogo[indexSmall].finish != ''){
 				escolherJogada(indexSmall)
 			}else{
