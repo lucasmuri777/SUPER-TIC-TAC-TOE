@@ -165,38 +165,43 @@ function verificarBoxRegras(box,index, type){
 	}
 	if(box[0] == box[4] && box[0] == box[8] && box[0] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,0)}
-		
+		if(type == 'big'){bigBoxChecked(bigBox, box, 0)}
 	}
 
 	if(box[0] == box[3] && box[0] == box[6] && box[0] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,0)}
-		
+		if(type == 'big'){bigBoxChecked(bigBox, box, 0)}
 	}
 
 	if(box[1] == box[4] && box[1] == box[7] && box[1] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,1)}
-		
+		if(type == 'big'){bigBoxChecked(bigBox, box, 1)}
 	}
 
 	if(box[2] == box[5] && box[2] == box[8] && box[2] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,2)}
+		if(type == 'big'){bigBoxChecked(bigBox, box, 2)}
 	}
 
 	if(box[2] == box[4] && box[2] == box[6] && box[3] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,2)}
+		if(type == 'big'){bigBoxChecked(bigBox, box, 2)}
 	}
 
 	if(box[3] == box[4] && box[3] == box[5] && box[3] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,3)}
+		if(type == 'big'){bigBoxChecked(bigBox, box, 3)}
 		
 	}
 
 	if(box[6] == box[7] && box[6] == box[8] && box[6] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box,6)}
+		if(type == 'big'){bigBoxChecked(bigBox, box, 6)}
 		
 	}
 	else if(box[0] != '' && box[1] != '' && box[2] != '' && box[3] != '' && box[4] != '' && box[5] != '' && box[6] != '' && box[7] != '' && box[8] != ''){
 		if(type == 'small'){smallBoxChecked(bigBox, box, 'JOKER')}
+		if(type == 'big'){bigBoxChecked(bigBox, box, 'JOKER')}
 		
 	}
 
