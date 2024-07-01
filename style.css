@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,body{
+	height: 100%
+}
+
+.container{
+	width: 100%;
+	height: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 100px 0.1%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.jogo-big{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap:wrap;
+}
+.jogo-big.finished{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 50px;
+}
+.jogo-big .big-box.disabled{
+	cursor: not-allowed;
+	background-color: rgba(0,0,0,0.5);
+}
+.jogo-big .big-box.active{
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.jogo-big .big-box{
+	display: flex;
+	width: calc(100%  / 3);
+	height: calc(100%  / 3);
+	border:1px solid black;
+	padding: 20px;
+}
+
+.jogo-small{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap:wrap;
+}
+
+.jogo-small .small-box{
+	display: flex;
+	width: calc(100%  / 3);
+	height: calc(100%  / 3);
+	border:1px solid black;
+	padding: 10px;
+}
+
+.big-box.finished{
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
